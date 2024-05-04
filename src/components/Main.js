@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom'
-import BackgroundJumbotron from './../assets/imagen-inicio.jpg'
+import BackgroundJumbotron from './../assets/portada.jpg'
 import ListProducts from './ListProducts'
 
 export default function Main() {
@@ -13,17 +13,21 @@ export default function Main() {
             <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
               <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
                 <div className="absolute inset-0">
-                  <img className="h-full w-full object-cover" src={ BackgroundJumbotron } alt="Guitarras para todo el público" />
-                  <div className="absolute inset-0 bg-gray-800 mix-blend-multiply"></div>
+                  <img className="h-full w-full object-cover" src={ BackgroundJumbotron } alt="Materiales de primera" />
+                  <div className="absolute inset-0 bg-gray-700 mix-blend-multiply"></div>
                 </div>
                 <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                   <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-                    <span className="block text-white">Tu primer cero kilómetro</span>
-                    <span className="block text-white">te está esperando.</span>
+                    <span className="block text-white">Solo los mejores materiales</span>
+                    
                   </h1>
                   <p className="mt-6 max-w-lg mx-auto text-center text-xl text-white sm:max-w-3xl">
-                    Contamos con el mayor stock de autos cero kilometro de Chile. Con más de 10 sucursales a lo largo del país.
+                    Contamos con el mayor stock de materiales para tu proyecto
                   </p>
+                  <p className="mt-6 max-w-lg mx-auto text-center text-xl text-white sm:max-w-3xl">
+                    Te acompañamos con la mejor asesoría de profesionales
+                  </p>
+                  
                   <div className="mt-10 max-w-sm mx-auto sm:max-w-none flex justify-center">
                     <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid  sm:gap-5">
                       <Link to="/catalogo">

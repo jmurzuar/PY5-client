@@ -124,11 +124,14 @@ const addCheckout = (id) => {
                   <h2 className="text-3xl font-extrabold text-gray-400">Características</h2>
 
                   <p className="text-base text-gray-900 mt-6">
-                    <b>Precio</b>: ${precio} USD
+                    <b>Precio</b>
                   </p>
 
-                  <p className="text-base text-gray-900 mb-6">
+                  {/* <p className="text-base text-gray-900 mb-6">
                     <b>Color</b>: { color }
+                  </p> */}
+                  <p className="text-base font-extrabold text-gray-900 mb-6">
+                  CLP $ {precio.toLocaleString('es-ES')}
                   </p>
 
                   {
@@ -153,10 +156,10 @@ const addCheckout = (id) => {
                     </div>
                   </div>
 
-                  <div className="mt-10">
-                    <h3 className="text-sm font-medium text-gray-900">Highlights</h3>
+                  {/* <div className="mt-10">
+                    <h3 className="text-sm font-medium text-gray-900">Highlights</h3> */}
 
-                    <div className="mt-4">
+                    {/* <div className="mt-4">
                       <ul role="list" className="pl-4 list-disc text-sm space-y-2">
                         <li className="text-gray-400"><span className="text-gray-600">Feature I</span></li>
 
@@ -166,11 +169,11 @@ const addCheckout = (id) => {
 
                         <li className="text-gray-400"><span className="text-gray-600">Feature IV</span></li>
                       </ul>
-                    </div>
-                  </div>
+                    </div> */}
+                  {/* </div> */}
 
                   <div className="mt-10">
-                    <h2 className="text-sm font-medium text-gray-900">Details</h2>
+                    <h2 className="text-sm font-medium text-gray-900">Detalles</h2>
 
                     <div className="mt-4 space-y-6">
                       <p className="text-sm text-gray-600"> { detalle }</p>

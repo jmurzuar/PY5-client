@@ -22,6 +22,10 @@ export default function ListProducts(props) {
 
   }, [])
 
+  function formatearNumero(numero) {
+    return numero.toLocaleString('es-ES'); // Esto formateará el número con separadores de miles
+  }
+
   return (
     <div className="bg-white">
       <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
@@ -50,7 +54,7 @@ export default function ListProducts(props) {
                           {e.color}
                         </p>
                       </div>
-                      <p className="text-sm font-medium text-gray-900">${e.precio}</p>
+                      <p className="text-lg font-medium text-gray-900">$ {e.precio.toLocaleString('es-ES')}</p>
                     </div>
                   </div>
                 </Link>

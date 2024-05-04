@@ -81,9 +81,9 @@ export default function Header() {
 
                 <div className="border-t border-gray-200 py-6 px-4">
                   <div className="-m-2 p-2 flex items-center">
-                    <img src="https://catamphetamine.gitlab.io/country-flag-icons/3x2/US.svg" alt="" className="w-5 h-auto block flex-shrink-0" />
+                    <img src="https://catamphetamine.gitlab.io/country-flag-icons/3x2/CL.svg" alt="" className="w-5 h-auto block flex-shrink-0" />
                     <span className="ml-3 block text-base font-medium text-gray-900">
-                      USD
+                      CLP
                     </span>
                   </div>
                 </div>
@@ -107,9 +107,11 @@ export default function Header() {
 
                 <Link to="/">
                   <div className="ml-4 mr-4 flex lg:ml-0">
-
-                    <img className="h-8 w-auto" src={GuitarLogo} alt="Guitar LATAM" />
-                    <span className="font-medium italic mt-1">MARKET TEC</span>
+                  <img className="h-8 w-auto" src={GuitarLogo} alt="Guitar LATAM" />                    
+                    <div class="bg-red-800 rounded-lg p-1">
+                    
+                    <h2 className="font-medium italic mt-1 text-white">MARKET TEC</h2>
+                    </div>
 
                   </div>
                 </Link>
@@ -132,9 +134,9 @@ export default function Header() {
 
                   <div className="hidden lg:ml-8 lg:flex">
                     <div className="mx-10 text-gray-700 hover:text-gray-800 flex items-center">
-                      <img src="https://catamphetamine.gitlab.io/country-flag-icons/3x2/US.svg" alt="" className="w-5 h-auto block flex-shrink-0" />
+                      <img src="https://catamphetamine.gitlab.io/country-flag-icons/3x2/CL.svg" alt="" className="w-5 h-auto block flex-shrink-0" />
                       <span className="ml-3 block text-sm font-medium">
-                        USD
+                        CLP
                       </span>
                     </div>
                   </div>
