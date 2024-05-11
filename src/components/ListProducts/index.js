@@ -1,8 +1,6 @@
 import React, { useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom'
-
-import Guitar from './../../assets/pexels-karolina-grabowska-4472061.jpg'
-
+  
 import ProductContext from './../../context/Product/ProductContext'
 
 
@@ -12,19 +10,24 @@ export default function ListProducts(props) {
 
   const { guitars, getGuitars } = ctx
 
+  // useEffect(() => {
+
+  //   const fetchGuitars = () => {
+  //     return getGuitars()
+  //   }
+
+  //   fetchGuitars()
+
+  // }, [])
+
   useEffect(() => {
+    const fetchGuitars = async () => {
+    await getGuitars();
+};
+fetchGuitars();
+}, [])
 
-    const fetchGuitars = () => {
-      return getGuitars()
-    }
 
-    fetchGuitars()
-
-  }, [])
-
-  function formatearNumero(numero) {
-    return numero.toLocaleString('es-ES'); // Esto formateará el número con separadores de miles
-  }
 
   return (
     <div className="bg-white">
@@ -56,6 +59,7 @@ export default function ListProducts(props) {
                       </div>
                       <p className="text-lg font-medium text-gray-900">$ {e.precio.toLocaleString('es-ES')}</p>
                     </div>
+                   
                   </div>
                 </Link>
 

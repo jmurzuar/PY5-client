@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import UserContext from '../context/User/UserContext'
 
@@ -6,6 +6,8 @@ import GuitarLogo from './../assets/guitarlogo.svg'
 
 import LayoutContext from './../context/Layout/LayoutContext'
 import Sidebar from './Sidebar'
+import CartWidget from './CartWidget'
+
 
 export default function Header() {
 
@@ -19,6 +21,7 @@ export default function Header() {
 
   return (
     <>
+     
       <div className="bg-white">
 
         {
@@ -85,6 +88,10 @@ export default function Header() {
                     <span className="ml-3 block text-base font-medium text-gray-900">
                       CLP
                     </span>
+
+                    <span className="ml-3 block text-base font-medium text-gray-900">
+                      <CartWidget />
+                    </span>
                   </div>
                 </div>
               </div>
@@ -138,6 +145,12 @@ export default function Header() {
                       <span className="ml-3 block text-sm font-medium">
                         CLP
                       </span>
+
+                      <span className="ml-3 block text-sm font-medium">
+                      <CartWidget />
+                      </span>
+
+                      
                     </div>
                   </div>
 
@@ -163,12 +176,15 @@ export default function Header() {
                         <Link to="/crear-cuenta" className="text-sm font-medium text-gray-700 hover:text-gray-800">
                           Crear cuenta
                         </Link>
+                        
                       </div>
+                      
                   }
-
+                  
                 </div>
               </div>
             </div>
+            
           </nav>
         </header>
         <Sidebar />

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import CartWidget from './CartWidget';
 
 export default function Footer() {
   return (
@@ -23,6 +24,8 @@ export default function Footer() {
               </svg>
             </a>
 
+            
+
             <a href="#" className="text-gray-400 hover:text-gray-500">
               <span className="sr-only">Twitter</span>
               <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -38,6 +41,7 @@ export default function Footer() {
             Esta es una tienda electrónica ficticia con objetivos académicos y de aprendizaje.
           </p>
         </div>
+        
       </footer>
 
     </div>

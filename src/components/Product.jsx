@@ -1,14 +1,82 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import MercadoPago from './../assets/mercadopago.jpg'
+import ProductContext from '../context/Product/ProductContext'
+import UserContext from '../context/User/UserContext'
+import { Link, useParams } from 'react-router-dom'
+import { CartContext } from '../context/CarContext'
+import ItemCount from './Itemcarro'
 
-import ProductContext from './../context/Product/ProductContext'
-import UserContext from './../context/User/UserContext'
-
-import {
-  Link,
-  useParams
-} from 'react-router-dom'
 
 export default function Product() {
+
+  const { carrito, setCarrito, valorTotal, setValorTotal } = useContext(CartContext);
+  console.log(carrito)
+  console.log(valorTotal)
+
+  // const { carrito, agregarAlCarrito } = useContext(CartContext);
+  //   console.log();
+
+  const [cantidad, setCantidad] = useState(1);
+
+  const handleAgregar = (guitar, cantidad) => {
+    const itemAgregado = { ...guitar, cantidad };
+
+    const nuevoCarrito = [...carrito];
+    console.log(nuevoCarrito)
+        const estaEnElCarrito = nuevoCarrito.find((producto) => producto[0]._id === itemAgregado[0]._id);
+        //console.log('soy nuevo carrito ', nuevoCarrito)
+
+        if (estaEnElCarrito) {
+          
+            estaEnElCarrito.cantidad += cantidad;
+            
+        } else {
+            nuevoCarrito.push(itemAgregado);
+            
+        }
+        
+        setCarrito(nuevoCarrito);
+
+
+    //setCarrito([...carrito, itemAgregado]);
+    setValorTotal(valorTotal + (precio*cantidad));
+   
+    // const existingItemIndex = carrito.findIndex(item => item.id === guitar.id);
+
+// if (existingItemIndex !== -1) {
+//   // Si el item ya está en el carrito, actualiza su cantidad
+//   const updatedCarrito = carrito.map((item, index) => {
+//     if (index === existingItemIndex) {
+//       return { ...item, cantidad: item.cantidad + cantidad };
+//     }
+//     return item;
+//   });
+
+//   setCarrito(updatedCarrito  );
+// } else {
+//   // Si el item no está en el carrito, agrégalo
+//   const itemAgregado = { ...guitar, cantidad };
+//   setCarrito([...carrito, itemAgregado]);
+// }
+}
+
+
+
+        
+  
+
+
+  const handleRestar = () => {
+    cantidad > 1 && setCantidad(cantidad - 1)
+}
+
+const handleSumar = () => {
+  setCantidad(cantidad + 1)
+}
+
+
+
+
 
   const params = useParams()
 
@@ -77,7 +145,8 @@ const addCheckout = (id) => {
 
 }
 
-  
+
+
 
   return (
     <div className="bg-white">
@@ -135,10 +204,15 @@ const addCheckout = (id) => {
                   <p className="text-base font-extrabold text-gray-900 mb-6">
                   CLP $ {precio.toLocaleString('es-ES')}
                   </p>
-
+                  
+                  
+				
+                  
                   {
                     user?.email ? 
-                    <div classNameName="mt-10" id="payment-form"></div>
+                    <div className="mt-10" id="payment-form">
+                      <img src={MercadoPago} alt="Descripción de la imagen"></img>
+                    </div>
                     :
                     <Link to="/crear-cuenta">
                       <button type="button" className="mt-10 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
@@ -173,16 +247,36 @@ const addCheckout = (id) => {
                       </ul>
                     </div> */}
                   {/* </div> */}
+                    
+
+                  <ItemCount
+                  cantidad={cantidad}
+                  handleRestar={handleRestar}
+                  handleSumar={handleSumar}
+                  handleAgregar={() => { handleAgregar(guitar, cantidad) }}
+                />
+      
+      
+    
+                  
 
                   <div className="mt-10">
                     <h2 className="text-sm font-medium text-gray-900">Detalles</h2>
-
+                    {/* <button onClick={handleClick (guitar)}>Haz clic aquí</button> */}
                     <div className="mt-4 space-y-6">
                       <p className="text-sm text-gray-600"> { detalle }</p>
+                      
                     </div>
                   </div>
                 </div>
               </div>
+              
+
+              
+						
+
+
+
             </div>
           </>
         )

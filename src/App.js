@@ -1,4 +1,5 @@
 import './App.css';
+
 import Main from './components/Main'
 import Product from './components/Product'
 
@@ -8,6 +9,7 @@ import Footer from './components/Footer';
 import Profile from './components/Profile'
 
 import Catalog from './components/Catalog'
+
 
 import {
   BrowserRouter as Router,
@@ -24,17 +26,29 @@ import LayoutState from './context/Layout/LayoutState'
 import AuthRoute from './components/Routes/AuthRoute';
 import PrivateRoute from './components/Routes/PrivateRoute'
 import PublicRoute from './components/Routes/PublicRoute';
+import { CartProvider } from './context/CarContext';
+import { Carro } from './components/Carro';
+
 
 
 
 function App() {
+
+
+  
+
   return (
     <>
+    <CartProvider>
     <LayoutState>
       <ProductState>
         <UserState>
           <Router>
+      
+
             <Header />
+
+            
 
             <Switch>
 
@@ -47,6 +61,10 @@ function App() {
 
               {/* RUTAS ESTÁTICAS */}
               <PublicRoute exact path="/catalogo" component={Catalog} />
+              <PublicRoute exact path="/carrito" component={Carro} />
+
+    
+
 
               {/* RUTAS DINÁMICAS */}
               <PublicRoute exact path="/:productId" component={Product} />
@@ -55,12 +73,14 @@ function App() {
               <PublicRoute exact path="/" component={Main} />
 
             </Switch>
-
+            
             <Footer />
+            
           </Router>
           </UserState>
         </ProductState>
       </LayoutState>
+      </CartProvider>
     </>
   );
 }
