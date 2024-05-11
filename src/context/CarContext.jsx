@@ -3,7 +3,7 @@ import { createContext, useEffect, useState } from "react";
 export const CartContext = createContext();
 
 const carritoInicial = JSON.parse(localStorage.getItem("carrito")) || [];
-const carritoTotal = JSON.parse(localStorage.getItem("valorTotal")) || [0];
+const carritoTotal = JSON.parse(localStorage.getItem("valorTotal")) || (0);
 
 
 export const CartProvider = ({children}) => {
