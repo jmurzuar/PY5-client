@@ -6,7 +6,7 @@ import ListProducts from './ListProducts'
 export default function Main() {
   return (
     <>
-      <main classNameName="mt-10">
+      <main className="mt-10">
         <div>
           <div className="relative">
             <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100"></div>

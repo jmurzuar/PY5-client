@@ -57,7 +57,7 @@ fetchGuitars();
                           {e.color}
                         </p>
                       </div>
-                      <p className="text-lg font-medium text-gray-900">$ {e.precio.toLocaleString('es-ES')}</p>
+                      <p className="text-lg font-medium text-gray-900">$ {e.precio.toLocaleString('es-CL')}</p>
                     </div>
                    
                   </div>

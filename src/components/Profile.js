@@ -97,11 +97,11 @@ export default function Profile() {
                                     </div>
                                     <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
                                         <div className="sm:col-span-3">
-                                            <label for="first-name" className="block text-sm font-medium text-gray-700">
+                                            <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
                                                 Tu nombre
                                             </label>
                                             <div className="mt-1">
-                                                <input type="text" name="first-name" id="first-name" autocomplete="given-name" className="p-1 border border-gray shadow-sm px-3 rounded focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent block w-full pr-6 sm:text-sm border-gray-300"
+                                                <input type="text" name="first-name" id="first-name" autoComplete="given-name" className="p-1 border border-gray shadow-sm px-3 rounded focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent block w-full pr-6 sm:text-sm border-gray-300"
                                                     name="name"
                                                     value={userForm.name}
                                                     onChange={(e) => { handleChange(e) }}
@@ -110,11 +110,11 @@ export default function Profile() {
                                         </div>
 
                                         <div className="sm:col-span-3">
-                                            <label for="last-name" className="block text-sm font-medium text-gray-700">
+                                            <label htmlFor="last-name" className="block text-sm font-medium text-gray-700">
                                                 Tus apellidos
                                             </label>
                                             <div className="mt-1">
-                                                <input type="text" name="last-name" id="last-name" autocomplete="family-name" className="p-1 border border-gray shadow-sm px-3 rounded focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent block w-full pr-6 sm:text-sm border-gray-300"
+                                                <input type="text" name="last-name" id="last-name" autoComplete="family-name" className="p-1 border border-gray shadow-sm px-3 rounded focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent block w-full pr-6 sm:text-sm border-gray-300"
                                                     name="lastname"
                                                     value={userForm.lastname}
                                                     onChange={(e) => { handleChange(e) }}
@@ -123,7 +123,7 @@ export default function Profile() {
                                         </div>
 
                                         <div className="sm:col-span-6">
-                                            <label for="email" className="block text-sm font-medium text-gray-700">
+                                            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                                                 Tu correo
                                             </label>
                                             <div className="mt-1">
@@ -139,12 +139,12 @@ export default function Profile() {
                                         </div>
 
                                         <div className="sm:col-span-6">
-                                            <label for="country" className="block text-sm font-medium text-gray-700">
+                                            <label htmlFor="country" className="block text-sm font-medium text-gray-700">
                                                 Tu país
                                             </label>
 
                                             <div className="mt-1">
-                                                <select id="country" name="country" autocomplete="country" className="p-1 border border-gray shadow-sm px-3 rounded focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent block w-full pr-6 sm:text-sm border-gray-300"
+                                                <select id="country" name="country" autoComplete="country" className="p-1 border border-gray shadow-sm px-3 rounded focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent block w-full pr-6 sm:text-sm border-gray-300"
                                                     onChange={(e) => { handleChange(e) }}
                                                 >
 
@@ -177,7 +177,7 @@ export default function Profile() {
 
 
                                         <div className="sm:col-span-6">
-                                            <label for="street-address" className="block text-sm font-medium text-gray-700">
+                                            <label htmlFor="street-address" className="block text-sm font-medium text-gray-700">
                                                 Dirección física (Incluye observaciones de ubicación)
                                             </label>
                                             <div className="mt-1">
@@ -191,7 +191,7 @@ export default function Profile() {
                                         </div>
 
                                         <div className="sm:col-span-1">
-                                            <label for="city" className="block text-sm font-medium text-gray-700">
+                                            <label htmlFor="city" className="block text-sm font-medium text-gray-700">
                                                 Ciudad
                                             </label>
                                             <div className="mt-1">
@@ -205,7 +205,7 @@ export default function Profile() {
                                         </div>
 
                                         <div className="sm:col-span-1">
-                                            <label for="state" className="block text-sm font-medium text-gray-700">
+                                            <label htmlFor="state" className="block text-sm font-medium text-gray-700">
                                                 Estado / Provincia
                                             </label>
                                             <div className="mt-1">
@@ -218,7 +218,7 @@ export default function Profile() {
                                         </div>
 
                                         <div className="sm:col-span-1">
-                                            <label for="state" className="block text-sm font-medium text-gray-700">
+                                            <label htmlFor="state" className="block text-sm font-medium text-gray-700">
                                                 Código Postal
                                             </label>
                                             <div className="mt-1">

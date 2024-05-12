@@ -9,7 +9,7 @@ import UserContext from '../context/User/UserContext'
 export const Carro = () => {
     const { carrito, valorTotal, cantidadEnCarrito, vaciarCarrito, precioTotal} = useContext(CartContext);
     
-    console.log(carrito)
+    // console.log(carrito)
 
 
     const iniciarPago = () => {
@@ -32,7 +32,7 @@ export const Carro = () => {
         carrito.length > 0 ?
         <>
         <div className="mt-4 lg:mt-4 ml-10 lg:flex lg:items-start lg:justify-between">
-    <p className="text-3xl font-semibold mb-4 lg:mb-4">Valor Total: $ {valorTotal.toLocaleString('es-ES')}</p>
+    <p className="text-3xl font-semibold mb-4 lg:mb-4">Valor Total: $ {valorTotal.toLocaleString('es-CL')}</p>
     </div>
     <div className="mt-4 lg:mt-0 ml-10 lg:flex lg:items-start lg:justify-between">
     <div className="lg:ml-4 lg:mt-1 lg:flex lg:space-x-2">
@@ -85,10 +85,10 @@ export const Carro = () => {
         <div className="p-4 flex items-center">
             <div className="flex-grow">
                 <h3 className="text-xl font-semibold">{prod[0].nombre}</h3>
-                <p className="text-gray-600">Precio unitario: $ {prod[0].precio.toLocaleString('es-ES')}</p>
+                <p className="text-gray-600">Precio unitario: $ {prod[0].precio.toLocaleString('es-CL')}</p>
                 <p className="text-gray-600">ID: {prod[0]._id} </p>
                 <p className="text-gray-600">Cantidad: {prod.cantidad} </p>
-                <p className="text-gray-600">Total parcial: $ {(prod[0].precio * prod.cantidad).toLocaleString('es-ES')}</p>
+                <p className="text-gray-600">Total parcial: $ {(prod[0].precio * prod.cantidad).toLocaleString('es-CL')}</p>
             </div>
             <div className="w-20 h-20 ml-4">
                 <img src={prod[0].imagen} alt="Two each of gray, white, and black shirts laying flat." className="w-full h-full object-center object-cover" />

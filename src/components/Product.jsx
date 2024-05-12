@@ -10,8 +10,8 @@ import ItemCount from './Itemcarro'
 export default function Product() {
 
   const { carrito, setCarrito, valorTotal, setValorTotal } = useContext(CartContext);
-  console.log(carrito)
-  console.log(valorTotal)
+  // console.log(carrito)
+  // console.log(valorTotal)
 
   // const { carrito, agregarAlCarrito } = useContext(CartContext);
   //   console.log();
@@ -182,7 +182,16 @@ const addCheckout = (id) => {
                 <div className="w-full rounded-lg overflow-hidden lg:block">
                   <img src={imagen} alt="Two each of gray, white, and black shirts laying flat." className="w-full h-full object-center object-cover" />
                 </div>
+                
               </div>
+              <div className="ml-6 max-w-2xl mx-auto sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8">
+              <ItemCount
+                  cantidad={cantidad}
+                  handleRestar={handleRestar}
+                  handleSumar={handleSumar}
+                  handleAgregar={() => { handleAgregar(guitar, cantidad) }}
+                />
+                </div>
 
               <div className="max-w-2xl mx-auto pt-10 pb-16 px-4 sm:px-6 lg:max-w-7xl lg:pt-16 lg:pb-24 lg:px-8 lg:grid lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8">
                 <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
@@ -202,7 +211,7 @@ const addCheckout = (id) => {
                     <b>Color</b>: { color }
                   </p> */}
                   <p className="text-base font-extrabold text-gray-900 mb-6">
-                  CLP $ {precio.toLocaleString('es-ES')}
+                  CLP $ {precio.toLocaleString('es-CL')}
                   </p>
                   
                   
@@ -248,18 +257,6 @@ const addCheckout = (id) => {
                     </div> */}
                   {/* </div> */}
                     
-
-                  <ItemCount
-                  cantidad={cantidad}
-                  handleRestar={handleRestar}
-                  handleSumar={handleSumar}
-                  handleAgregar={() => { handleAgregar(guitar, cantidad) }}
-                />
-      
-      
-    
-                  
-
                   <div className="mt-10">
                     <h2 className="text-sm font-medium text-gray-900">Detalles</h2>
                     {/* <button onClick={handleClick (guitar)}>Haz clic aquí</button> */}

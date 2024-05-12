@@ -34,7 +34,7 @@ export default function Header() {
                   <button onClick={toggleMobileSidebar} type="button" className="-m-2 p-2 rounded-md inline-flex items-center justify-center text-gray-400">
                     <span className="sr-only">Cerrar menu</span>
                     <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </button>
                 </div>
@@ -88,12 +88,17 @@ export default function Header() {
                     <span className="ml-3 block text-base font-medium text-gray-900">
                       CLP
                     </span>
+                    </div>
+                </div>
 
+                <div className="border-t border-gray-200 py-6 px-4" onClick={toggleMobileSidebar}>
+                  <div className="-m-2 flex items-center">
                     <span className="ml-3 block text-base font-medium text-gray-900">
                       <CartWidget />
                     </span>
                   </div>
                 </div>
+
               </div>
             </div>
             :
@@ -108,14 +113,14 @@ export default function Header() {
                 <button onClick={toggleMobileSidebar} type="button" className="bg-white p-2 rounded-md text-gray-400 lg:hidden">
                   <span className="sr-only">Open menu</span>
                   <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                   </svg>
                 </button>
 
                 <Link to="/">
                   <div className="ml-4 mr-4 flex lg:ml-0">
                   <img className="h-8 w-auto" src={GuitarLogo} alt="Guitar LATAM" />                    
-                    <div class="bg-red-800 rounded-lg p-1">
+                    <div className="bg-red-800 rounded-lg p-1">
                     
                     <h2 className="font-medium italic mt-1 text-white">MARKET TEC</h2>
                     </div>
