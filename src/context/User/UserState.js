@@ -89,6 +89,8 @@ const UserState = (props) => {
             type: "LOGOUT_USUARIO"
         })
 
+        localStorage.clear();
+
     }
 
 

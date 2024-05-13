@@ -49,7 +49,7 @@ const ProductState = (props) => {
 
     const getPreferenceCheckoutMP = async (dataform) => {
 
-        console.log("dataform:", dataform)
+        console.log("dataform1:", dataform)
 
         const res = await axiosClient.post("/mercadopago", dataform)
 

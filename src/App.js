@@ -28,6 +28,7 @@ import PrivateRoute from './components/Routes/PrivateRoute'
 import PublicRoute from './components/Routes/PublicRoute';
 import { CartProvider } from './context/CarContext';
 import { Carro } from './components/Carro';
+import { MercadoPago } from './components/MercadoPago';
 
 
 
@@ -63,7 +64,7 @@ function App() {
               <PublicRoute exact path="/catalogo" component={Catalog} />
               <PublicRoute exact path="/carrito" component={Carro} />
 
-    
+              <PublicRoute exact path="/mp" component={MercadoPago} />
 
 
               {/* RUTAS DINÁMICAS */}

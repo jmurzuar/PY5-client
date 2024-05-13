@@ -7,9 +7,14 @@ import GuitarLogo from './../assets/guitarlogo.svg'
 import LayoutContext from './../context/Layout/LayoutContext'
 import Sidebar from './Sidebar'
 import CartWidget from './CartWidget'
+import { CartContext } from '../context/CarContext'
+
+
 
 
 export default function Header() {
+
+  const { vaciarCarrito} = useContext(CartContext);
 
   const ctxLayout = useContext(LayoutContext)
 
@@ -18,6 +23,10 @@ export default function Header() {
   const ctxUser = useContext(UserContext)
 
   const { logoutUser } = ctxUser
+
+  const handleVaciar = () => {
+    vaciarCarrito();
+  }
 
   return (
     <>
@@ -168,7 +177,7 @@ export default function Header() {
                             <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">Tu perfil</a>
                           </Link>
                           <span className="h-6 w-px bg-gray-200" aria-hidden="true"></span>
-                          <a onClick={logoutUser} href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">Cerrar sesión</a>
+                          <a onClick={() => { logoutUser(); handleVaciar(); }} href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">Cerrar sesión</a>
                         </div>
                       </>
 

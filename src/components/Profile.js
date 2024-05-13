@@ -31,10 +31,12 @@ export default function Profile() {
 
     let countries = [
         "-----",
-        "México",
-        "Colombia",
-        "Perú",
         "Chile",
+        "Argentina",
+        "Perú",
+        "Colombia",
+        "Brasil",
+        "Venezuela",
         "Otro país..."
     ]
 
@@ -97,12 +99,12 @@ export default function Profile() {
                                     </div>
                                     <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
                                         <div className="sm:col-span-3">
-                                            <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
+                                            <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                                                 Tu nombre
                                             </label>
                                             <div className="mt-1">
-                                                <input type="text" name="first-name" id="first-name" autoComplete="given-name" className="p-1 border border-gray shadow-sm px-3 rounded focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent block w-full pr-6 sm:text-sm border-gray-300"
-                                                    name="name"
+                                                <input type="text" name="name" id="first-name" autoComplete="given-name" className="p-1 border border-gray shadow-sm px-3 rounded focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent block w-full pr-6 sm:text-sm border-gray-300"
+                                                    //name="name"
                                                     value={userForm.name}
                                                     onChange={(e) => { handleChange(e) }}
                                                 />
@@ -110,12 +112,12 @@ export default function Profile() {
                                         </div>
 
                                         <div className="sm:col-span-3">
-                                            <label htmlFor="last-name" className="block text-sm font-medium text-gray-700">
+                                            <label htmlFor="lastname" className="block text-sm font-medium text-gray-700">
                                                 Tus apellidos
                                             </label>
                                             <div className="mt-1">
-                                                <input type="text" name="last-name" id="last-name" autoComplete="family-name" className="p-1 border border-gray shadow-sm px-3 rounded focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent block w-full pr-6 sm:text-sm border-gray-300"
-                                                    name="lastname"
+                                                <input type="text" name="lastname" id="last-name" autoComplete="family-name" className="p-1 border border-gray shadow-sm px-3 rounded focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent block w-full pr-6 sm:text-sm border-gray-300"
+                                                    //name="lastname"
                                                     value={userForm.lastname}
                                                     onChange={(e) => { handleChange(e) }}
                                                 />
@@ -132,7 +134,7 @@ export default function Profile() {
                                                     type="email"
                                                     className="p-1 border border-gray shadow-sm px-3 rounded focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent block w-full pr-6 sm:text-sm border-gray-300"
                                                     onChange={(e) => { handleChange(e) }}
-                                                    name="email"
+                                                    //name="email"
                                                     value={userForm.email}
                                                 />
                                             </div>
@@ -143,7 +145,7 @@ export default function Profile() {
                                                 Tu país
                                             </label>
 
-                                            <div className="mt-1">
+                                            {/* <div className="mt-1">
                                                 <select id="country" name="country" autoComplete="country" className="p-1 border border-gray shadow-sm px-3 rounded focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent block w-full pr-6 sm:text-sm border-gray-300"
                                                     onChange={(e) => { handleChange(e) }}
                                                 >
@@ -172,7 +174,30 @@ export default function Profile() {
                                                         })
                                                     }
                                                 </select>
-                                            </div>
+                                            </div> */}
+
+<div className="mt-1">
+    <select
+        id="country"
+        name="country"
+        autoComplete="country"
+        className="p-1 border border-gray shadow-sm px-3 rounded focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent block w-full pr-6 sm:text-sm border-gray-300"
+        value={userForm.country} // Usa el valor del estado userForm
+        onChange={handleChange} // Usa la misma función de cambio para todos los campos
+    >
+        {countries.map((countryOption, index) => (
+            <option key={index} value={countryOption}>
+                {countryOption}
+            </option>
+        ))}
+    </select>
+</div>
+
+
+
+
+
+
                                         </div>
 
 

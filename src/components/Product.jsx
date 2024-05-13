@@ -1,10 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react'
-import MercadoPago from './../assets/mercadopago.jpg'
+import MercadoPago2 from './../assets/mercadopago.jpg'
 import ProductContext from '../context/Product/ProductContext'
 import UserContext from '../context/User/UserContext'
 import { Link, useParams } from 'react-router-dom'
 import { CartContext } from '../context/CarContext'
 import ItemCount from './Itemcarro'
+
 
 
 export default function Product() {
@@ -151,6 +152,7 @@ const addCheckout = (id) => {
   return (
     <div className="bg-white">
 
+
       {guitar.length === 0 ?
         null :
         (
@@ -220,7 +222,7 @@ const addCheckout = (id) => {
                   {
                     user?.email ? 
                     <div className="mt-10" id="payment-form">
-                      <img src={MercadoPago} alt="Descripción de la imagen"></img>
+                      <img src={MercadoPago2} alt="Descripción de la imagen"></img>
                     </div>
                     :
                     <Link to="/crear-cuenta">
@@ -256,13 +258,15 @@ const addCheckout = (id) => {
                       </ul>
                     </div> */}
                   {/* </div> */}
-                    
+              
                   <div className="mt-10">
                     <h2 className="text-sm font-medium text-gray-900">Detalles</h2>
                     {/* <button onClick={handleClick (guitar)}>Haz clic aquí</button> */}
                     <div className="mt-4 space-y-6">
                       <p className="text-sm text-gray-600"> { detalle }</p>
                       
+                      
+
                     </div>
                   </div>
                 </div>
@@ -271,7 +275,7 @@ const addCheckout = (id) => {
 
               
 						
-
+    
 
 
             </div>

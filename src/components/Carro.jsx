@@ -1,22 +1,20 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../context/CarContext'
-
-import MercadoPago from './../assets/mercadopago.jpg'
-import UserContext from '../context/User/UserContext'
-
-
+import { MercadoPago } from './MercadoPago'
+import UserContext from '../context/User/UserContext';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 export const Carro = () => {
-    const { carrito, valorTotal, cantidadEnCarrito, vaciarCarrito, precioTotal} = useContext(CartContext);
-    
+    const { carrito, valorTotal, vaciarCarrito} = useContext(CartContext);
+    const { user } = useContext(UserContext);
     // console.log(carrito)
 
 
-    const iniciarPago = () => {
-        // Aquí deberías implementar la lógica para iniciar el proceso de pago con Mercado Pago
-        // Esto puede incluir redireccionar al usuario a una página de pago o mostrar un modal de pago, dependiendo de la integración de Mercado Pago que estés utilizando
-        console.log('Iniciando proceso de pago con Mercado Pago para el monto:', valorTotal);
-      };
+    // const iniciarPago = () => {
+    //     // Aquí deberías implementar la lógica para iniciar el proceso de pago con Mercado Pago
+    //     // Esto puede incluir redireccionar al usuario a una página de pago o mostrar un modal de pago, dependiendo de la integración de Mercado Pago que estés utilizando
+    //     console.log('Iniciando proceso de pago con Mercado Pago para el monto:', valorTotal);
+    //   };
 
       const handleVaciar = () => {
         vaciarCarrito();
@@ -33,13 +31,10 @@ export const Carro = () => {
         <>
         <div className="mt-4 lg:mt-4 ml-10 lg:flex lg:items-start lg:justify-between">
     <p className="text-3xl font-semibold mb-4 lg:mb-4">Valor Total: $ {valorTotal.toLocaleString('es-CL')}</p>
+    
     </div>
-    <div className="mt-4 lg:mt-0 ml-10 lg:flex lg:items-start lg:justify-between">
-    <div className="lg:ml-4 lg:mt-1 lg:flex lg:space-x-2">
-        <button className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded" onClick={handleVaciar}>Vaciar Carro</button>
-        <button className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded" onClick={iniciarPago}>Pagar con Mercado Pago</button>
-    </div>
-    </div>
+
+    
         {/* <p>Valor Total: $ {valorTotal.toLocaleString('es-ES')}</p>
 
         <button onClick={handleVaciar}>Vaciar Carro</button>
@@ -102,6 +97,35 @@ export const Carro = () => {
         }
         
 
+       
+
+    <div className="flex items-center space-x-4 pl-10">
+        {
+                    user?.email ? 
+                    <div className="mt-10" id="payment-form1">
+                        <MercadoPago containerId="payment-form" />
+                    </div>
+                    :
+                    <Link to="/crear-cuenta">
+                      <button type="button" className="mt-10 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        Para adquirir, regístrate primero
+                      </button>
+                    </Link>
+                  }
+                
+                {
+        carrito.length > 0 ? (
+        <>
+        <div className="mt-10" id="payment-form1">
+        <button className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded" onClick={handleVaciar}>Vaciar Carro</button>
+        {/* <button className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded" onClick={iniciarPago}>Pagar con Mercado Pago</button> */}
+        </div>
+        </> ) : (
+        <span></span>
+        )
+    }
+
+    </div>
         
 
     </div>
