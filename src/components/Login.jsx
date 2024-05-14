@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 
-import UserContext from './../context/User/UserContext'
+import UserContext from '../context/User/UserContext'
 
 import Logo from "./../assets/guitarlogo.svg"
 
@@ -44,10 +44,12 @@ export default function Login() {
         </h2>
         <p className="mt-2 text-center text-sm text-gray-600">
           ¿Aún sin cuenta? &nbsp;
-          <Link to="crear-cuenta">
-            <a className="font-medium text-yellow-500 hover:text-yellow-300">
+          {/* <Link to="crear-cuenta"> */}
+          <Link to="/crear-cuenta" className="font-medium text-yellow-500 hover:text-yellow-300">
               Regístrate aquí.
-            </a>
+            {/* <a className="font-medium text-yellow-500 hover:text-yellow-300">
+              Regístrate aquí.
+            </a> */}
           </Link>
         </p>
       </div>
@@ -59,7 +61,7 @@ export default function Login() {
             onSubmit={(e) => { sendData(e) }}
           >
             <div>
-              <label for="email" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                 Tu correo electrónico
               </label>
               <div className="mt-1">
@@ -74,7 +76,7 @@ export default function Login() {
             </div>
 
             <div>
-              <label for="password" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
                 Tu contraseña
               </label>
               <div className="mt-1">

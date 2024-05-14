@@ -10,13 +10,28 @@ export default function AuthRoute({ component: Component, ...props }) {
 
     const [loading, setLoading] = useState(true)
 
+    // useEffect(() => {
+    //     const fetchToken = async () => {
+    //     await verifyingToken();
+    //     setLoading(false);
+    // };
+    // fetchToken();
+    // }, [ authStatus ])
+
+    //INICIO CAMBIO
     useEffect(() => {
-        const fetchToken = async () => {
-        await verifyingToken();
-        setLoading(false);
-    };
-    fetchToken();
-    }, [ authStatus ])
+        const fetchData = async () => {
+          await verifyingToken();
+          setLoading(false);
+        };
+    
+        fetchData();
+    
+        //Dependencia authStatus para que se vuelva a ejecutar cuando cambie
+    //   }, [verifyingToken, authStatus]);
+    }, [authStatus]);
+
+      //FIN CAMBIO
 
     return (
         <Route {...props} render={ props => {            

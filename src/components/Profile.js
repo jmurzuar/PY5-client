@@ -176,22 +176,22 @@ export default function Profile() {
                                                 </select>
                                             </div> */}
 
-<div className="mt-1">
-    <select
-        id="country"
-        name="country"
-        autoComplete="country"
-        className="p-1 border border-gray shadow-sm px-3 rounded focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent block w-full pr-6 sm:text-sm border-gray-300"
-        value={userForm.country} // Usa el valor del estado userForm
-        onChange={handleChange} // Usa la misma función de cambio para todos los campos
-    >
-        {countries.map((countryOption, index) => (
-            <option key={index} value={countryOption}>
-                {countryOption}
-            </option>
-        ))}
-    </select>
-</div>
+                                            <div className="mt-1">
+                                                <select
+                                                    id="country"
+                                                    name="country"
+                                                    autoComplete="country"
+                                                    className="p-1 border border-gray shadow-sm px-3 rounded focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent block w-full pr-6 sm:text-sm border-gray-300"
+                                                    value={userForm.country} // Usa el valor del estado userForm
+                                                    onChange={handleChange} // Usa la misma función de cambio para todos los campos
+                                                >
+                                                    {countries.map((countryOption, index) => (
+                                                        <option key={index} value={countryOption}>
+                                                            {countryOption}
+                                                        </option>
+                                                    ))}
+                                                </select>
+                                            </div>
 
 
 

@@ -85,7 +85,8 @@ const handleSumar = () => {
 
   const ctxProduct = useContext(ProductContext)
   const { guitar, getGuitar, getPreferenceCheckoutMP } = ctxProduct
-  const { nombre, precio, imagen, color, descripcion, detalle } = guitar[0]
+  //const { nombre, precio, imagen, color, descripcion, detalle } = guitar[0]
+  const { nombre, precio, imagen, descripcion, detalle } = guitar[0]
 
   const ctxUser = useContext(UserContext)
   const { user } = ctxUser
@@ -140,7 +141,7 @@ const addCheckout = (id) => {
     },
     render: {
       container: `#payment-form`,
-      label: "Pagar"
+      label: "Compra Rápida"
     }
   })
 

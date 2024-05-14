@@ -4,7 +4,7 @@ import UserContext from '../context/User/UserContext'
 
 import GuitarLogo from './../assets/guitarlogo.svg'
 
-import LayoutContext from './../context/Layout/LayoutContext'
+import LayoutContext from '../context/Layout/LayoutContext'
 import Sidebar from './Sidebar'
 import CartWidget from './CartWidget'
 import { CartContext } from '../context/CarContext'
@@ -57,9 +57,10 @@ export default function Header() {
                   </div>
 
                   <div className="flow-root" onClick={toggleMobileSidebar}>
-                    <Link to="/catalogo">
+                    <Link to="/catalogo" className="-m-2 p-2 block font-medium text-gray-900">Catálogo</Link>
+                    {/* <Link to="/catalogo">
                       <a href="#" className="-m-2 p-2 block font-medium text-gray-900">Catálogo</a>
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
 
@@ -69,22 +70,25 @@ export default function Header() {
                     ctxUser.user?.name ?
                       <>
                         <div className="flow-root" onClick={toggleMobileSidebar}>
-                          <Link to="/perfil">
+                          <Link to="/perfil" className="-m-2 p-2 block font-medium text-gray-900">Mi perfil</Link>
+                          {/* <Link to="/perfil">
                             <a href="#" className="-m-2 p-2 block font-medium text-gray-900">Mi perfil</a>
-                          </Link>
+                          </Link> */}
                         </div>
                       </>
                       :
                       <>
                         <div className="flow-root" onClick={toggleMobileSidebar}>
-                          <Link to="/iniciar-sesion">
+                          <Link to="/iniciar-sesion" className="-m-2 p-2 block font-medium text-gray-900">Iniciar sesión</Link>
+                          {/* <Link to="/iniciar-sesion">
                             <a href="#" className="-m-2 p-2 block font-medium text-gray-900">Iniciar sesión</a>
-                          </Link>
+                          </Link> */}
                         </div>
                         <div className="flow-root" onClick={toggleMobileSidebar}>
-                          <Link to="/iniciar-sesion">
+                          <Link to="/iniciar-sesion" className="-m-2 p-2 block font-medium text-gray-900">Crear cuenta</Link>
+                          {/* <Link to="/iniciar-sesion">
                             <a href="#" className="-m-2 p-2 block font-medium text-gray-900">Crear cuenta</a>
-                          </Link>
+                          </Link> */}
                         </div>
                       </>
                   }
@@ -173,11 +177,13 @@ export default function Header() {
 
                       <>
                         <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                          <Link to="/perfil">
+                          <Link to="/perfil" className="text-sm font-medium text-gray-700 hover:text-gray-800">Tu perfil</Link>
+                          {/* <Link to="/perfil">
                             <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">Tu perfil</a>
-                          </Link>
+                          </Link> */}
                           <span className="h-6 w-px bg-gray-200" aria-hidden="true"></span>
-                          <a onClick={() => { logoutUser(); handleVaciar(); }} href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">Cerrar sesión</a>
+                          <Link to="#" onClick={() => { logoutUser(); handleVaciar(); }} className="text-sm font-medium text-gray-700 hover:text-gray-800" >Cerrar sesión</Link>
+                          {/* <a onClick={() => { logoutUser(); handleVaciar(); }} href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">Cerrar sesión</a> */}
                         </div>
                       </>
 

@@ -45,10 +45,12 @@ export default function Register() {
         </h2>
         <p className="mt-2 text-center text-sm text-gray-600">
           ¿Ya tienes cuenta? &nbsp;
-          <Link to="iniciar-sesion">
+          <Link to="/iniciar-sesion" className="font-medium text-yellow-500 hover:text-yellow-300">
+              Inicia sesión.
+            {/* <Link to="iniciar-sesion">
             <a className="font-medium text-yellow-500 hover:text-yellow-300">
               Inicia sesión.
-            </a>
+            </a> */}
           </Link>
         </p>
       </div>
@@ -58,7 +60,7 @@ export default function Register() {
           <form onSubmit={(e) => { sendData(e) }} className="space-y-6">
 
           <div>
-              <label for="password" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
                 Tu nombre completo
               </label>
               <div className="mt-1">
@@ -73,7 +75,7 @@ export default function Register() {
             </div>
 
             <div>
-              <label for="email" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                 Tu correo electrónico
               </label>
               <div className="mt-1">
@@ -88,7 +90,7 @@ export default function Register() {
             </div>
 
             <div>
-              <label for="password" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
                 Tu contraseña
               </label>
               <div className="mt-1">
@@ -103,7 +105,7 @@ export default function Register() {
             </div>
 
             <div>
-              <label for="password" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
                 Confirma tu contraseña
               </label>
               <div className="mt-1">

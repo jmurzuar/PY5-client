@@ -36,51 +36,51 @@ import { MercadoPago } from './components/MercadoPago';
 function App() {
 
 
-  
+
 
   return (
     <>
-    <CartProvider>
-    <LayoutState>
-      <ProductState>
-        <UserState>
-          <Router>
-      
-
-            <Header />
-
-            
-
-            <Switch>
-
-              {/* RUTAS PRIVADAS */}
-              <PrivateRoute exact path="/perfil" component={ Profile } />          
-
-              {/* RUTAS DE AUTENTICACIÓN */}
-              <AuthRoute exact path="/iniciar-sesion" component={Login} />
-              <AuthRoute exact path="/crear-cuenta" component={Register} />
-
-              {/* RUTAS ESTÁTICAS */}
-              <PublicRoute exact path="/catalogo" component={Catalog} />
-              <PublicRoute exact path="/carrito" component={Carro} />
-
-              <PublicRoute exact path="/mp" component={MercadoPago} />
+      <CartProvider>
+        <LayoutState>
+          <ProductState>
+            <UserState>
+              <Router>
 
 
-              {/* RUTAS DINÁMICAS */}
-              <PublicRoute exact path="/:productId" component={Product} />
+                <Header />
 
-              {/* RUTA BASE */}
-              <PublicRoute exact path="/" component={Main} />
 
-            </Switch>
-            
-            <Footer />
-            
-          </Router>
-          </UserState>
-        </ProductState>
-      </LayoutState>
+
+                <Switch>
+
+                  {/* RUTAS PRIVADAS */}
+                  <PrivateRoute exact path="/perfil" component={Profile} />
+
+                  {/* RUTAS DE AUTENTICACIÓN */}
+                  <AuthRoute exact path="/iniciar-sesion" component={Login} />
+                  <AuthRoute exact path="/crear-cuenta" component={Register} />
+
+                  {/* RUTAS ESTÁTICAS */}
+                  <PublicRoute exact path="/catalogo" component={Catalog} />
+                  <PublicRoute exact path="/carrito" component={Carro} />
+
+                  <PublicRoute exact path="/mp" component={MercadoPago} />
+
+
+                  {/* RUTAS DINÁMICAS */}
+                  <PublicRoute exact path="/:productId" component={Product} />
+
+                  {/* RUTA BASE */}
+                  <PublicRoute exact path="/" component={Main} />
+
+                </Switch>
+
+                <Footer />
+
+              </Router>
+            </UserState>
+          </ProductState>
+        </LayoutState>
       </CartProvider>
     </>
   );
