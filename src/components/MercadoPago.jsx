@@ -54,6 +54,8 @@ export const MercadoPago = ({ containerId }) => {
       setCheckoutInitialized(true);
     };
 
+    
+
     initializeMercadoPago();
 
     return () => {

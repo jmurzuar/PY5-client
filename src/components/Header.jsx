@@ -14,7 +14,7 @@ import { CartContext } from '../context/CarContext'
 
 export default function Header() {
 
-  const { vaciarCarrito} = useContext(CartContext);
+  const { vaciarCarrito } = useContext(CartContext);
 
   const ctxLayout = useContext(LayoutContext)
 
@@ -30,7 +30,7 @@ export default function Header() {
 
   return (
     <>
-     
+
       <div className="bg-white">
 
         {
@@ -101,7 +101,7 @@ export default function Header() {
                     <span className="ml-3 block text-base font-medium text-gray-900">
                       CLP
                     </span>
-                    </div>
+                  </div>
                 </div>
 
                 <div className="border-t border-gray-200 py-6 px-4" onClick={toggleMobileSidebar}>
@@ -132,10 +132,10 @@ export default function Header() {
 
                 <Link to="/">
                   <div className="ml-4 mr-4 flex lg:ml-0">
-                  <img className="h-8 w-auto" src={GuitarLogo} alt="Guitar LATAM" />                    
+                    <img className="h-8 w-auto" src={GuitarLogo} alt="Guitar LATAM" />
                     <div className="bg-red-800 rounded-lg p-1">
-                    
-                    <h2 className="font-medium italic mt-1 text-white">MARKET TEC</h2>
+
+                      <h2 className="font-medium italic mt-1 text-white">MARKET TEC</h2>
                     </div>
 
                   </div>
@@ -155,7 +155,27 @@ export default function Header() {
                   </div>
                 </div>
 
+                {
+                  ctxUser.user?.name ?
+
+                    <>
+                      <span className="ml-9 font-medium bg-yellow-500 rounded-lg p-2 h-8 flex items-center justify-center">
+                        Hola {ctxUser.user.name}!!
+                      </span>
+                    </>
+
+                    :
+                    <>
+                      <span className="h-6 w-px bg-gray-200" aria-hidden="true"></span>
+                    </>
+
+                }
+
                 <div className="ml-auto flex items-center">
+
+
+
+
 
                   <div className="hidden lg:ml-8 lg:flex">
                     <div className="mx-10 text-gray-700 hover:text-gray-800 flex items-center">
@@ -165,10 +185,10 @@ export default function Header() {
                       </span>
 
                       <span className="ml-3 block text-sm font-medium">
-                      <CartWidget />
+                        <CartWidget />
                       </span>
 
-                      
+
                     </div>
                   </div>
 
@@ -196,15 +216,15 @@ export default function Header() {
                         <Link to="/crear-cuenta" className="text-sm font-medium text-gray-700 hover:text-gray-800">
                           Crear cuenta
                         </Link>
-                        
+
                       </div>
-                      
+
                   }
-                  
+
                 </div>
               </div>
             </div>
-            
+
           </nav>
         </header>
         <Sidebar />
