@@ -74,7 +74,7 @@ export const Carro = () => {
 
 
 <div className="mx-auto max-w-screen-xl px-4">
-<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
     {carrito.map((prod, index) => (
         <div key={index} className="my-4 border border-gray-200 rounded-lg overflow-hidden">
         <div className="p-4 flex items-center">
@@ -85,7 +85,7 @@ export const Carro = () => {
                 <p className="text-gray-600">Cantidad: {prod.cantidad} </p>
                 <p className="text-gray-600">Total parcial: $ {(prod[0].precio * prod.cantidad).toLocaleString('es-CL')}</p>
             </div>
-            <div className="w-20 h-20 ml-4">
+            <div className="sm: w-20 h-20 ml-4 md: w-20 h-20 ml-4 lg: w-20 h-20 ml-4">
                 <img src={prod[0].imagen} alt="Two each of gray, white, and black shirts laying flat." className="w-full h-full object-center object-cover" />
             </div>
         </div>

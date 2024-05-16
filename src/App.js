@@ -29,6 +29,9 @@ import PublicRoute from './components/Routes/PublicRoute';
 import { CartProvider } from './context/CarContext';
 import { Carro } from './components/Carro';
 import { MercadoPago } from './components/MercadoPago';
+import SuccessPage from './components/SuccessPage';
+import FailPage from './components/FailPage';
+import PendingPage from './components/PendingPage';
 
 
 
@@ -65,6 +68,9 @@ function App() {
                   <PublicRoute exact path="/carrito" component={Carro} />
 
                   <PublicRoute exact path="/mp" component={MercadoPago} />
+                  <PublicRoute exact path="/success" component={SuccessPage} />
+                  <PublicRoute exact path="/failure" component={FailPage} />
+                  <PublicRoute exact path="/pending" component={PendingPage} />
 
 
                   {/* RUTAS DINÁMICAS */}

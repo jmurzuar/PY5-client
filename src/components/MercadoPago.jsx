@@ -16,6 +16,18 @@ export const MercadoPago = ({ containerId }) => {
 
   const [checkoutInitialized, setCheckoutInitialized] = useState(false);
 
+  const baseUrl = process.env.REACT_APP_BASE_URL;
+  const pathSucc = '/success';
+  const pathFail = '/failure';
+  const pathPend = '/pending';
+
+  const back_urls = {
+    success: `${baseUrl}${pathSucc}`,
+    failure: `${baseUrl}${pathFail}`,
+    pending: `${baseUrl}${pathPend}`
+  };
+
+
   useEffect(() => {
     const initializeMercadoPago = async () => {
       if (!user || checkoutInitialized) return;
@@ -27,7 +39,9 @@ export const MercadoPago = ({ containerId }) => {
           currency_id: 'CLP',
           unit_price: prod[0].precio,
           picture_url: prod[0].imagen
-        }))
+        })),
+          back_urls: back_urls,
+          auto_return: 'approved'
       });
 
       const script = document.createElement('script');
