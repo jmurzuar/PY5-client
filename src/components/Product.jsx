@@ -4,7 +4,7 @@ import ProductContext from '../context/Product/ProductContext'
 import UserContext from '../context/User/UserContext'
 import { Link, useParams } from 'react-router-dom'
 import { CartContext } from '../context/CarContext'
-import ItemCount from './Itemcarro'
+import ItemCount from './ItemCount'
 
 
 

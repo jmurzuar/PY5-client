@@ -21,6 +21,7 @@ import Register from './components/Register';
 
 import ProductState from './context/Product/ProductState';
 import UserState from './context/User/UserState';
+import VentaState from './context/Venta/VentaState';
 import LayoutState from './context/Layout/LayoutState'
 
 import AuthRoute from './components/Routes/AuthRoute';
@@ -32,6 +33,8 @@ import { MercadoPago } from './components/MercadoPago';
 import SuccessPage from './components/SuccessPage';
 import FailPage from './components/FailPage';
 import PendingPage from './components/PendingPage';
+import CrearVenta from './context/Venta/CrearVenta';
+import HistorySales from './components/HistorySales';
 
 
 
@@ -47,6 +50,7 @@ function App() {
         <LayoutState>
           <ProductState>
             <UserState>
+              <VentaState>
               <Router>
 
 
@@ -66,11 +70,15 @@ function App() {
                   {/* RUTAS ESTÁTICAS */}
                   <PublicRoute exact path="/catalogo" component={Catalog} />
                   <PublicRoute exact path="/carrito" component={Carro} />
+                  <PublicRoute exact path="/sales" component={HistorySales} />
 
                   <PublicRoute exact path="/mp" component={MercadoPago} />
                   <PublicRoute exact path="/success" component={SuccessPage} />
                   <PublicRoute exact path="/failure" component={FailPage} />
                   <PublicRoute exact path="/pending" component={PendingPage} />
+
+
+                  <PublicRoute exact path="/venta" component={CrearVenta} />
 
 
                   {/* RUTAS DINÁMICAS */}
@@ -84,6 +92,7 @@ function App() {
                 <Footer />
 
               </Router>
+              </VentaState>
             </UserState>
           </ProductState>
         </LayoutState>
