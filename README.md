@@ -1,70 +1,160 @@
-# Getting Started with Create React App
+![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/banner.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# PROYECTO 5: Aplicación de Comercio Electrónico
 
-## Available Scripts
+## **ÍNDICE**
 
-In the project directory, you can run:
+* [1. Intro](#1-intro)
+* [2. Estructura de la página](#2-Estructura)
+* [3. Pantallas](#3-Pantallas)
+* [4. Tecnologías Utilizadas](#4-Tecnologías-Utilizadas)
+* [5. Principales Características](#5-Principales-Características)
+* [6. Legal](#6-Legal)
+* [7. Despliegue](#7-Despliegue)
+  
+****
 
-### `npm start`
+## 1. Intro
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Este proyecto está enfocado en construir una aplicación de eCommerce.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Este proyecto contiene los siguientes elementos:
 
-### `npm test`
+- Un catálogo de productos
+- Un carrito de compras
+- Una pasarela de pago realizada con MercadoPago (versión de pruebas)
+- Autenticación (registro de usuario e inicio de sesión, a través de JWT)
+- Autorización (zona privada donde el usuario pueda ver su perfil)
+- Considera para el desarrollo de este proyecto, las tecnologías siguientes:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+FRONTEND
+- ReactJS
+- Context API (Manejo de estados)
 
-### `npm run build`
+BACKEND
+- Node con ExpressJS
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+BASE DE DATOS
+- MongoDB
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[volver al índice](#ÍNDICE)
+****
 
-### `npm run eject`
+## 2. Estructura
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Estructura general de la página
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Esquema pantalla de inicio
+![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema%20Inicio%20y%20nosotros.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Esquema pantalla catalogo de productos
+![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema_menu.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Esquema pantalla detalle de producto y agregar carro
+![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema_reservas.png)
 
-## Learn More
+### Esquema pantalla detalle de compras
+![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema_menu.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Esquema pantalla detalle carro de compra
+![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema_reservas.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Esquema pantalla inicio de sesión
+![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema_reservas.png)
 
-### Code Splitting
+### Esquema pantalla crear cuenta
+![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema_menu.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Esquema pantalla editar perfil
+![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema_reservas.png)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+[volver al índice](#ÍNDICE)
+****
 
-### Making a Progressive Web App
+## 3. Pantallas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Pantalla de inicio
+![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema%20Inicio%20y%20nosotros.png)
 
-### Advanced Configuration
+### Pantalla catalogo de productos
+![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema_menu.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Pantalla detalle de producto y agregar carro
+![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema_reservas.png)
 
-### Deployment
+### Pantalla detalle de compras
+![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema_menu.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Pantalla detalle carro de compra
+![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema_reservas.png)
 
-### `npm run build` fails to minify
+### Pantalla inicio de sesión
+![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema_reservas.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Pantalla crear cuenta
+![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema_menu.png)
+
+### Pantalla editar perfil
+![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema_reservas.png)
+
+
+[volver al índice](#ÍNDICE)
+****
+
+## 4. Tecnologías Utilizadas
+
+![LogosPY2](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/tecnologias.png)
+
+El objetivo principal de este proyecto fue desarrollar una aplicación con REACT, Compomentes, HOOKS, utilizando interfaz HTML, CSS y JavaScript
+
+
+[volver al índice](#ÍNDICE)
+****
+
+## 5. Principales Características
+
+En el desarollo de este proyecto, se cumple con:
+
+### FRONTEND
+- [X] Desarrollar prototipado simple.
+- [X]  Uso de ReactJS
+- [X]  Uso de Context API
+- [X]  Ruta de Home
+- [X]  Ruta de Checkout
+- [X]  Ruta de registro de usuario
+- [X]  Ruta de inicio de sesión
+- [X]  Ruta de "Mi perfil"
+- [X]  Ruta de Producto individual
+- [X]  Ruta de Listado de productos
+
+
+### BACKEND
+- [X] Uso de ExpressJS
+- [X]  Creación y gestión de rutas necesarias para el funcionamiento del Frontend
+
+### CONTROL DE VERSIONES
+- [X] Utilizar GIT para en control de versiones.
+- [X] Crear un repositorio en GitHub y realizar mínimo 5 "commits" en tu repositorio.
+- [X] Crear una URL para compartir VERCEL
+- [X] Se crea archivo README con la descripción dentro del repositorio
+
+
+[volver al índice](#ÍNDICE)
+****
+
+## 6. Legal
+
+- Esta página fue creada con fines educativos, NO COMERCIAL, contiene imagenes con derechos de autor que se han utilizado solo para ejemplos
+- Página creada en el marco del Bootcamp desarrollo web full stack, corte 11 de la Universidad de Desarrrollo - Chile
+- Creado en Mayo 2024
+  
+[volver al índice](#ÍNDICE)
+****
+
+## 7. Despliegue
+
+Link al proyecto publicado en VERCEL (https://py-5-client.vercel.app/)
+
+[volver al índice](#ÍNDICE)
