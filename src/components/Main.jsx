@@ -41,7 +41,7 @@ export default function Main() {
 
       </main>
 
-      <ListProducts title="Conoce nuestro catálogo" />
+      <ListProducts title="Conoce los 4 productos más vendidos del último mes" numToShow={4}/>
     </>
   )
 }

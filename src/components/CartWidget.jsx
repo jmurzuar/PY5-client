@@ -7,7 +7,7 @@ const CartWidget = () => {
     const { carrito, cantidadEnCarrito, valorTotal } = useContext(CartContext);
 
   return (
-    <div className="bg-blue-500 rounded-lg p-4 h-4 flex items-center justify-center">
+    <div className="bg-blue-500 rounded-lg p-4 h-4 flex items-center justify-center hover:bg-yellow-500">
     <Link className="menu-link flex items-center" to="/carrito">
             <p className="pl-2 pr-2 text-white">Ver Carro</p>
 

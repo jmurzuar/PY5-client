@@ -241,7 +241,7 @@ function SuccessPage() {
       <p className="text-lg text-gray-800">Collection Status: {collectionStatus}</p>
       <p className="text-lg text-gray-800">Payment ID: {paymentId}</p>
       {/* Mostrar otros datos de la URL según sea necesario */}
-      <h2 className="text-2xl text-blue-500 mt-4">{countdown > 0 ? `Redirigiendo en ${countdown} segundos...` : "Redirigiendo..."}</h2>
+      <h2 className="text-2xl text-blue-500 mt-4">{countdown > 0 ? `Estamos gestionando su compra, espere... finalizaremos en ${countdown} segundos...` : "Redirigiendo..."}</h2>
 
       {ventaCreada.estado && (
         <CrearVentaFunction

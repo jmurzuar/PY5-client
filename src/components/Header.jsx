@@ -133,9 +133,9 @@ export default function Header() {
                 <Link to="/">
                   <div className="ml-4 mr-4 flex lg:ml-0">
                     <img className="h-8 w-auto" src={GuitarLogo} alt="Guitar LATAM" />
-                    <div className="bg-red-800 rounded-lg p-1">
+                    <div>
 
-                      <h2 className="font-medium italic mt-1 text-white">MARKET TEC</h2>
+                      <h2 className="ml-1 font-medium bg-red-500 text-white rounded-lg h-8 w-32 flex items-center justify-center hover:bg-green-400">MARKET TEC</h2>
                     </div>
 
                   </div>
@@ -159,9 +159,12 @@ export default function Header() {
                   ctxUser.user?.name ?
 
                     <>
-                      <span className="ml-9 font-medium bg-yellow-500 rounded-lg p-2 h-8 flex items-center justify-center">
+                      <Link to="/" className="ml-5 font-medium text-white bg-yellow-500 rounded-lg p-2 h-8 w-32 flex items-center justify-center hover:bg-red-500">
                         Hola {ctxUser.user.name}!!
-                      </span>
+                        </Link>
+                      <Link to="/sales" className="ml-5 border-transparent text-gray-700 hover:text-gray-800 relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px" aria-expanded="false">
+                        Tus compras
+                        </Link>
                     </>
 
                     :

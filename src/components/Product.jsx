@@ -72,7 +72,7 @@ export default function Product() {
   }
 
   const handleSumar = () => {
-    setCantidad(cantidad + 1)
+    cantidad < 5 && setCantidad(cantidad + 1)
   }
 
 
