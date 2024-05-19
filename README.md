@@ -102,7 +102,7 @@ BASE DE DATOS
 
 ## 4. Tecnologías Utilizadas
 
-![LogosPY2](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/tecnologias.png)
+![LogosPY2](https://github.com/jmurzuar/PY5-client/blob/master/public/tecnologias.png)
 
 El objetivo principal de este proyecto fue desarrollar una aplicación con REACT, Compomentes, HOOKS, utilizando interfaz HTML, CSS y JavaScript
 
