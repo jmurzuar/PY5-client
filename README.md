@@ -76,28 +76,25 @@ BASE DE DATOS
 ## 3. Pantallas
 
 ### Pantalla de inicio
-![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema%20Inicio%20y%20nosotros.png)
+![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/01%20pt%20main.png)
 
 ### Pantalla catalogo de productos
-![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema_menu.png)
+![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/02%20pt%20catalogo.png)
 
 ### Pantalla detalle de producto y agregar carro
-![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema_reservas.png)
+![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/03%20pt%20detalle_producto.png)
 
 ### Pantalla detalle de compras
-![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema_menu.png)
+![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/04%20pt%20detalle_compras.png)
 
 ### Pantalla detalle carro de compra
-![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema_reservas.png)
+![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/05%20pt%20detalle_carro.png)
 
-### Pantalla inicio de sesión
-![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema_reservas.png)
-
-### Pantalla crear cuenta
-![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema_menu.png)
+### Pantalla inicio de sesión y creación de cuenta
+![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/06%20pt%20iniciar_crear_cuenta.png)
 
 ### Pantalla editar perfil
-![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema_reservas.png)
+![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/08%20pt%20editar_perfil.png)
 
 
 [volver al índice](#ÍNDICE)
