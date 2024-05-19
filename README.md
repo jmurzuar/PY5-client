@@ -1,4 +1,4 @@
-![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/banner.png)
+![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/banner.png)
 
 # PROYECTO 5: Aplicación de Comercio Electrónico
 
@@ -46,28 +46,28 @@ BASE DE DATOS
 ### Estructura general de la página
 
 ### Esquema pantalla de inicio
-![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema%20Inicio%20y%20nosotros.png)
+![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/01%20ly%20main.png)
 
 ### Esquema pantalla catalogo de productos
-![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema_menu.png)
+![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/02%20ly%20catalogo.png)
 
 ### Esquema pantalla detalle de producto y agregar carro
-![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema_reservas.png)
+![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/03%20ly%20detalle_producto.png)
 
 ### Esquema pantalla detalle de compras
-![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema_menu.png)
+![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/04%20ly%20detalle_compras.png)
 
 ### Esquema pantalla detalle carro de compra
-![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema_reservas.png)
+![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/05%20ly%20detalle_carro.png)
 
 ### Esquema pantalla inicio de sesión
-![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema_reservas.png)
+![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/06%20ly%20iniciar_sesion.png)
 
 ### Esquema pantalla crear cuenta
-![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema_menu.png)
+![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/07%20ly%20crear_cuenta.png)
 
 ### Esquema pantalla editar perfil
-![Esquema1](https://github.com/jmurzuar/PY4-Restaurante/blob/master/src/assets/esquema_reservas.png)
+![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/08%20ly%20editar_perfil.png)
 
 
 [volver al índice](#ÍNDICE)
