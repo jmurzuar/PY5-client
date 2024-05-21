@@ -104,25 +104,25 @@ BASE DE DATOS
 ## 4. Pantallas Mercado Pago
 
 ### Seleccionar medio de pago
-![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/mp01.png)
+![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/mp01.PNG)
 
 ### Ingresar tarjeta
-![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/mp02.png)
+![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/mp02.PNG)
 
 ### Ingresar número documento titular
-![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/mp03.png)
+![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/mp03.PNG)
 
 ### Seleccionar número de cuotas
-![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/mp04.png)
+![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/mp04.PNG)
 
 ### Confirmar datos de compra
-![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/mp05.png)
+![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/mp05.PNG)
 
 ### Pantalla de pago realizado
-![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/mp06.png)
+![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/mp06.PNG)
 
 ### Pantalla de direccionamiento pago exitoso
-![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/mp07.png)
+![Esquema1](https://github.com/jmurzuar/PY5-client/blob/master/public/mp07.PNG)
 
 [volver al índice](#ÍNDICE)
 ****
