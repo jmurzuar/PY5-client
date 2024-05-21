@@ -216,7 +216,7 @@ export default function Product() {
 
 
 
-                  {
+                  {/* {
                     user?.email ?
                       <div className="mt-10" id="payment-form">
                         <img src={MercadoPago2} alt="Descripción de la imagen"></img>
@@ -227,7 +227,7 @@ export default function Product() {
                           Para adquirir, regístrate primero
                         </button>
                       </Link>
-                  }
+                  } */}
 
                 </div>
 
