@@ -7,11 +7,11 @@
 * [1. Intro](#1-intro)
 * [2. Estructura de la página](#2-Estructura)
 * [3. Pantallas](#3-Pantallas)
-* [4. Pantallas Mercado Pago](#3-Pantallas-Mercado-Pago)
-* [5. Tecnologías Utilizadas](#4-Tecnologías-Utilizadas)
-* [6. Principales Características](#5-Principales-Características)
-* [7. Legal](#6-Legal)
-* [8. Despliegue](#7-Despliegue)
+* [4. Pantallas Mercado Pago](#4-Pantallas-Mercado-Pago)
+* [5. Tecnologías Utilizadas](#5-Tecnologías-Utilizadas)
+* [6. Principales Características](#6-Principales-Características)
+* [7. Legal](#7-Legal)
+* [8. Despliegue](#8-Despliegue)
   
 ****
 
