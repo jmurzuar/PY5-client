@@ -159,12 +159,14 @@ export default function Header() {
                   ctxUser.user?.name ?
 
                     <>
-                      <Link to="/" className="ml-5 font-medium text-white bg-yellow-500 rounded-lg p-2 h-8 w-32 flex items-center justify-center hover:bg-red-500">
-                        Hola {ctxUser.user.name}!!
-                        </Link>
+                      <Link to="/" className="ml-5 font-medium text-white bg-yellow-500 rounded-lg p-2 h-8 w-38 flex items-center justify-center hover:bg-red-500 overflow-hidden">
+                        <span className="text-xs truncate">
+                          Hola {ctxUser.user.name}!!
+                        </span>
+                      </Link>
                       <Link to="/sales" className="ml-5 border-transparent text-gray-700 hover:text-gray-800 relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px" aria-expanded="false">
                         Tus compras
-                        </Link>
+                      </Link>
                     </>
 
                     :
