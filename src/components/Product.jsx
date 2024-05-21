@@ -38,7 +38,7 @@ export default function Product() {
     //setCarrito([...carrito, itemAgregado]);
     setValorTotal(valorTotal + (precio * cantidad));
 
-  
+
   }
 
 
@@ -229,6 +229,10 @@ export default function Product() {
                       </Link>
                   } */}
 
+                  <div className="mt-10">
+                    <img src={MercadoPago2} alt="Descripción de la imagen"></img>
+                  </div>
+
                 </div>
 
                 <div className="py-10 lg:pt-6 lg:pb-16 lg:col-start-1 lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
@@ -240,7 +244,7 @@ export default function Product() {
                     </div>
                   </div>
 
-                  
+
                   <div className="mt-10">
                     <h2 className="text-sm font-medium text-gray-900">Detalles</h2>
                     {/* <button onClick={handleClick (guitar)}>Haz clic aquí</button> */}

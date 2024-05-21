@@ -50,7 +50,7 @@ export const Carro = () => {
                 <p className="text-gray-600">Cantidad: {prod.cantidad} </p>
                 <p className="text-gray-600">Total parcial: $ {(prod[0].precio * prod.cantidad).toLocaleString('es-CL')}</p>
             </div>
-            <div className="sm: w-20 h-20 ml-4 md: w-20 h-20 ml-4 lg: w-20 h-20 ml-4">
+            <div className="w-20 h-20 ml-4">
                 <img src={prod[0].imagen} alt="Two each of gray, white, and black shirts laying flat." className="w-full h-full object-center object-cover" />
             </div>
         </div>
