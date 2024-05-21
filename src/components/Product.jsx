@@ -11,11 +11,7 @@ import ItemCount from './ItemCount'
 export default function Product() {
 
   const { carrito, setCarrito, valorTotal, setValorTotal } = useContext(CartContext);
-  // console.log(carrito)
-  // console.log(valorTotal)
 
-  // const { carrito, agregarAlCarrito } = useContext(CartContext);
-  //   console.log();
 
   const [cantidad, setCantidad] = useState(1);
 
@@ -42,23 +38,7 @@ export default function Product() {
     //setCarrito([...carrito, itemAgregado]);
     setValorTotal(valorTotal + (precio * cantidad));
 
-    // const existingItemIndex = carrito.findIndex(item => item.id === guitar.id);
-
-    // if (existingItemIndex !== -1) {
-    //   // Si el item ya está en el carrito, actualiza su cantidad
-    //   const updatedCarrito = carrito.map((item, index) => {
-    //     if (index === existingItemIndex) {
-    //       return { ...item, cantidad: item.cantidad + cantidad };
-    //     }
-    //     return item;
-    //   });
-
-    //   setCarrito(updatedCarrito  );
-    // } else {
-    //   // Si el item no está en el carrito, agrégalo
-    //   const itemAgregado = { ...guitar, cantidad };
-    //   setCarrito([...carrito, itemAgregado]);
-    // }
+  
   }
 
 
@@ -260,22 +240,7 @@ export default function Product() {
                     </div>
                   </div>
 
-                  {/* <div className="mt-10">
-                    <h3 className="text-sm font-medium text-gray-900">Highlights</h3> */}
-
-                  {/* <div className="mt-4">
-                      <ul role="list" className="pl-4 list-disc text-sm space-y-2">
-                        <li className="text-gray-400"><span className="text-gray-600">Feature I</span></li>
-
-                        <li className="text-gray-400"><span className="text-gray-600">Feature II</span></li>
-
-                        <li className="text-gray-400"><span className="text-gray-600">Feature III</span></li>
-
-                        <li className="text-gray-400"><span className="text-gray-600">Feature IV</span></li>
-                      </ul>
-                    </div> */}
-                  {/* </div> */}
-
+                  
                   <div className="mt-10">
                     <h2 className="text-sm font-medium text-gray-900">Detalles</h2>
                     {/* <button onClick={handleClick (guitar)}>Haz clic aquí</button> */}

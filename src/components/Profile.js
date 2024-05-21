@@ -145,37 +145,7 @@ export default function Profile() {
                                                 Tu país
                                             </label>
 
-                                            {/* <div className="mt-1">
-                                                <select id="country" name="country" autoComplete="country" className="p-1 border border-gray shadow-sm px-3 rounded focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent block w-full pr-6 sm:text-sm border-gray-300"
-                                                    onChange={(e) => { handleChange(e) }}
-                                                >
-
-                                                    {
-                                                        countries.map(e => {
-                                                            return e === country ?
-                                                                (
-                                                                    <>
-                                                                        <option
-                                                                            value={e}
-                                                                            selected
-                                                                            value={e}>{e}
-                                                                        </option>
-                                                                    </>
-                                                                )
-                                                                :
-                                                                (
-                                                                    <>
-                                                                        <option
-                                                                            value={userForm.country}
-                                                                            onChange={(e) => { handleChange(e) }}
-                                                                            value={e}>{e}</option>
-                                                                    </>
-                                                                )
-                                                        })
-                                                    }
-                                                </select>
-                                            </div> */}
-
+                                            
                                             <div className="mt-1">
                                                 <select
                                                     id="country"

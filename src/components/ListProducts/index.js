@@ -10,15 +10,7 @@ export default function ListProducts(props) {
 
   const { guitars, getGuitars } = ctx
   const { title, numToShow } = props;
-  // useEffect(() => {
 
-  //   const fetchGuitars = () => {
-  //     return getGuitars()
-  //   }
-
-  //   fetchGuitars()
-
-  // }, [])
 
   useEffect(() => {
     const fetchGuitars = async () => {

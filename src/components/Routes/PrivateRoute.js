@@ -12,12 +12,6 @@ export default function PrivateRoute({ component: Component, ...props }) {
 
     const [loading, setLoading] = useState(true)
 
-    // useEffect(async () => {
-
-    //     await verifyingToken()
-    //     setLoading(false)
-        
-    // }, [authStatus])
 
     //INICIO CAMBIO
     useEffect(() => {

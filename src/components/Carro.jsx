@@ -10,12 +10,7 @@ export const Carro = () => {
     // console.log(carrito)
 
 
-    // const iniciarPago = () => {
-    //     // Aquí deberías implementar la lógica para iniciar el proceso de pago con Mercado Pago
-    //     // Esto puede incluir redireccionar al usuario a una página de pago o mostrar un modal de pago, dependiendo de la integración de Mercado Pago que estés utilizando
-    //     console.log('Iniciando proceso de pago con Mercado Pago para el monto:', valorTotal);
-    //   };
-
+    
       const handleVaciar = () => {
         vaciarCarrito();
       }
